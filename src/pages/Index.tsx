@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Hero from "@/components/Hero";
+import AboutUs from "@/components/AboutUs";
+import OurMission from "@/components/OurMission";
+import Services from "@/components/Services";
+import CtaSection from "@/components/CtaSection";
+import Therapists from "@/components/Therapists";
+import Testimonials from "@/components/Testimonials";
+import Career from "@/components/Career";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="flex flex-col min-h-screen">
+      <Hero />
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row gap-8 py-16">
+          <AboutUs />
+          <OurMission />
+        </div>
+        <Services />
       </div>
+      <CtaSection />
+      <div className="container mx-auto px-4 py-16">
+        <Therapists />
+        <Testimonials />
+        <Career />
+      </div>
+      <Footer />
     </div>
   );
 };
