@@ -2,20 +2,17 @@
 import { Home, Info, User, List } from "lucide-react";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white border-b border-gray-200 fixed w-full top-0 z-50">
+    <nav className="bg-unity-purple-dark border-b border-unity-purple-light fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-unity-purple-dark font-bold text-xl">
+          <Link to="/" className="text-white font-bold text-xl">
             Unity
           </Link>
 
@@ -24,7 +21,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <Link 
                   to="/" 
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-unity-purple-dark"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/80 hover:text-white"
                 >
                   <Home className="w-4 h-4" />
                   Home
@@ -34,7 +31,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <Link 
                   to="/about" 
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-unity-purple-dark"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/80 hover:text-white"
                 >
                   <Info className="w-4 h-4" />
                   About
@@ -44,7 +41,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <Link 
                   to="/therapist" 
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-unity-purple-dark"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/80 hover:text-white"
                 >
                   <User className="w-4 h-4" />
                   Therapist
@@ -54,7 +51,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <Link 
                   to="/services" 
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-unity-purple-dark"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/80 hover:text-white"
                 >
                   <List className="w-4 h-4" />
                   Services
