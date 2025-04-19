@@ -1,10 +1,10 @@
 
 import { IconLeaf } from "@tabler/icons-react";
-import ImagePlaceholder from "./ImagePlaceholder";
+// import ImagePlaceholder from "./ImagePlaceholder";
 
 const AboutUs = () => {
   return (
-    <div className="flex-1">
+    <div id="about" className="flex-1">
       <div className="flex items-center gap-2 mb-4">
         <IconLeaf className="text-[#4b2a75]" size={20} />
         <span className="text-sm uppercase font-semibold text-[#4b2a75]">ABOUT US</span>
@@ -13,8 +13,8 @@ const AboutUs = () => {
       
       <div className="flex mb-6">
         <div className="mr-4">
-          <div className="w-24 h-24 rounded-lg overflow-hidden">
-            <ImagePlaceholder text="Couple hands" />
+          <div className="w-24 h-44 rounded-lg overflow-hidden">
+            <img   src =" https://images.pexels.com/photos/1378723/pexels-photo-1378723.jpeg?auto=compress&cs=tinysrgb&w=600"/>
           </div>
         </div>
         <div>

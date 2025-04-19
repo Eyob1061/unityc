@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
         
         <div className="text-xs text-gray-500 border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between">
-          <p>© 2023 Unity. All rights reserved.</p>
+          <p>© 2025 Unity. All rights reserved.</p>
           <div className="flex space-x-4 mt-3 md:mt-0">
             <a href="#">Privacy</a>
             <a href="#">Terms</a>

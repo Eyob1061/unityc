@@ -1,12 +1,13 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="relative unity-gradient min-h-[500px] flex items-center justify-center text-white">
+    <div id="home" className="relative unity-gradient min-h-[500px] flex items-center justify-center text-white">
       <div className="absolute inset-0 z-0 bg-opacity-75 bg-[#4b2a75]">
         <img
-          src="/lovable-uploads/c7f1de1c-074d-4806-84d8-3d0583ded509.png"
+          src="https://images.pexels.com/photos/1415131/pexels-photo-1415131.jpeg?auto=compress&cs=tinysrgb&w=600"
           alt="Couple silhouette"
           className="w-full h-full object-cover mix-blend-overlay opacity-50"
         />
@@ -17,10 +18,12 @@ const Hero = () => {
         <p className="text-lg mb-8">
           Your trusted advisors for marriage, pre-marital and couple counseling
         </p>
-        <Button className="bg-white hover:bg-gray-100 text-black rounded-full px-8 py-2 flex items-center gap-2">
-          <span>BOOK FREE MEETING</span>
-          <span className="flex items-center justify-center rounded-full bg-black w-5 h-5 text-white">→</span>
-        </Button>
+        <Link to="/register">
+          <Button className="bg-white hover:bg-gray-100 text-black rounded-full px-8 py-2 flex items-center gap-2">
+            <span>Start Your Journey</span>
+            <span className="flex items-center justify-center rounded-full bg-black w-5 h-5 text-white">→</span>
+          </Button>
+        </Link>
       </div>
     </div>
   );
