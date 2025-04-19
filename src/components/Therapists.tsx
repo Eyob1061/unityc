@@ -1,31 +1,32 @@
 
-import ImagePlaceholder from "./ImagePlaceholder";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { User } from "lucide-react";
 
 const therapists = [
   {
     name: "Emma",
     id: 1,
-    img: "https://plus.unsplash.com/premium_photo-1669882305273-674eff6567af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+    image: "/therapists/emma.jpg"
   },
   {
     name: "Monica",
     id: 2,
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&auto=format&fit=crop&q=60"
+    image: "/therapists/monica.jpg"
   },
   {
     name: "Sandra",
     id: 3,
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=60"
+    image: "/therapists/sandra.jpg"
   },
   {
     name: "John",
     id: 4,
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&auto=format&fit=crop&q=60"
+    image: "/therapists/john.jpg"
   },
   {
     name: "Amara",
     id: 5,
-    img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&auto=format&fit=crop&q=60"
+    image: "/therapists/amara.jpg"
   }
 ];
 
@@ -40,17 +41,16 @@ const Therapists = () => {
       <div className="flex flex-wrap justify-center gap-6">
         {therapists.map((therapist) => (
           <div key={therapist.id} className="text-center">
-            <div className="w-32 h-32 overflow-hidden rounded-lg mb-4 mx-auto bg-gray-100 shadow-md">
-              {therapist.img ? (
-                <img 
-                  src={therapist.img} 
-                  alt={therapist.name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <ImagePlaceholder text={therapist.name} />
-              )}
-            </div>
+            <Avatar className="w-24 h-24 mx-auto mb-2">
+              <AvatarImage 
+                src={therapist.image} 
+                alt={`${therapist.name}'s profile picture`} 
+                className="object-cover"
+              />
+              <AvatarFallback>
+                <User className="w-12 h-12 text-gray-500" />
+              </AvatarFallback>
+            </Avatar>
             <p className="text-sm font-medium">{therapist.name}</p>
           </div>
         ))}
